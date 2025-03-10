@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Marketing Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            margin: 1rem 0 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background: #ff4757;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Products Section */
+        .products {
+            padding: 3rem 0;
+        }
+
+        .products h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin: 1rem;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .product-card h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .product-card p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .product-card .btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .rating {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
+        /* Wishlist Button */
+        .wishlist-btn {
+            background: #ff4757;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            background: #333;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        #newsletter-form {
+            margin-top: 1rem;
+        }
+
+        #newsletter-form input {
+            width: 300px;
+            padding: 0.5rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #newsletter-form button {
+            padding: 0.5rem 1rem;
+            background: #ff4757;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+
+        footer ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        footer ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Dark Mode */
+        .dark-mode {
+            background: #333;
+            color: #fff;
+        }
+
+        .dark-mode header, .dark-mode footer {
+            background: #222;
+        }
+
+        .dark-mode .product-card {
+            background: #444;
+            border-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Affiliate Marketing Website</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Discover Amazing Products</h2>
+            <p>Explore our curated list of top-notch products that you'll love!</p>
+            <a href="#products" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Description of Product 1. This product is amazing because...</p>
+                    <div class="rating">★★★★☆ <span>(4.2/5)</span></div>
+                    <a href="https://example.com/product1" target="_blank" class="btn">Buy Now</a>
+                    <button class="wishlist-btn" data-product-id="1">❤️ Add to Wishlist</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Description of Product 2. This product is amazing because...</p>
+                    <div class="rating">★★★★★ <span>(5/5)</span></div>
+                    <a href="https://example.com/product2" target="_blank" class="btn">Buy Now</a>
+                    <button class="wishlist-btn" data-product-id="2">❤️ Add to Wishlist</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="product3.jpg" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>Description of Product 3. This product is amazing because...</p>
+                    <div class="rating">★★★☆☆ <span>(3.5/5)</span></div>
+                    <a href="https://example.com/product3" target="_blank" class="btn">Buy Now</a>
+                    <button class="wishlist-btn" data-product-id="3">❤️ Add to Wishlist</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Affiliate Marketing Website. All rights reserved.</p>
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Wishlist Functionality
+        const wishlistButtons = document.querySelectorAll('.wishlist-btn');
+        wishlistButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert(`Product ${button.getAttribute('data-product-id')} added to wishlist!`);
+            });
+        });
+
+        // Newsletter Form Submission
+        const newsletterForm = document.getElementById('newsletter-form');
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+        });
+    </script>
+</body>
+</html>
